@@ -18,8 +18,9 @@ BiocStyle::markdown()
 # Introduction
 
 This document describes how the Biocrates MxP500-based targeted metabolomics
-data from the CHRIS study [@pattaro_cooperative_2015]
-[@verri_hernandes_age_2022] can be loaded and analyzed in R.
+data from the CHRIS study [@pattaro_cooperative_2015] can be loaded and analyzed
+in R. This data set provides metabolite and lipid abundances from a subset of
+CHRIS participants.
 
 The provided *values* for each metabolite are absolute concentrations in
 **natural scale**.
@@ -136,9 +137,7 @@ quantile(metabo_data$Gly, na.rm = TRUE)
 
 As we can see from the values above they are in **natural scale** - so, for data
 analysis it might be better to transform them using `log2` or `log10` (which
-will also ensure the data to be more Gaussian distributed). See also
-[@verri_hernandes_age_2022] for more information on data distribution and
-quality.
+will also ensure the data to be more Gaussian distributed).
 
 At last we also evaluate the distribution of the coefficients of variation for
 all analytes in the data set.
